@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f9; /* Cor de fundo levemente cinza */
     color: #333; /* Cor do texto principal */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave na troca de tema */
 }
 
 /* Container para centralizar o conteúdo e dar um limite de largura */
@@ -26,6 +27,24 @@ header {
     text-align: center;
     padding: 60px 0;
     margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+/* --- Estilos do Botão --- */
+.btn-tema {
+    background-color: #f1c40f; /* Cor amarela para destacar no modo claro */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.btn-tema:hover {
+    background-color: #f39c12; /* Fica um pouco mais escuro ao passar o mouse */
 }
 
 /* Estilização da Foto de Perfil */
@@ -55,6 +74,7 @@ header {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sobre-mim h3 {
@@ -85,6 +105,7 @@ header {
     border-radius: 8px;
     border-left: 5px solid #3498db; /* Faixa azul na lateral esquerda */
     margin-top: 20px;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
 }
 
 /* Rodapé */
@@ -121,4 +142,9 @@ body.dark-mode .sobre-mim h3 {
 
 body.dark-mode .lista-itens li {
     border-bottom: 1px solid #333; /* Linhas divisórias bem discretas */
+}
+
+/* Ajusta a borda da foto de perfil no modo escuro */
+body.dark-mode .foto-perfil {
+    border-color: #1e1e1e;
 }
