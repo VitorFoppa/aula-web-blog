@@ -1,0 +1,1 @@
+O seguinte blog foi feito com o auxilio do Gemini.Pro.

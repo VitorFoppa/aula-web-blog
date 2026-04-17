@@ -1,0 +1,96 @@
+/* Configurações globais: Reseta margens e define a fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que preenchimentos não aumentem o tamanho do elemento */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Cor de fundo levemente cinza */
+    color: #333; /* Cor do texto principal */
+}
+
+/* Container para centralizar o conteúdo e dar um limite de largura */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilização do Cabeçalho */
+header {
+    background-color: #2c3e50; /* Azul escuro */
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 30px;
+}
+
+/* Estilização da Foto de Perfil */
+.perfil {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave ao redor da foto */
+    object-fit: cover; /* Garante que a foto não fique esticada */
+}
+
+.tagline {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Seção Sobre Mim */
+.sobre-mim {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.sobre-mim h3 {
+    border-bottom: 2px solid #3498db; /* Linha azul embaixo do título */
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Estilização da lista de itens */
+.lista-itens {
+    list-style: none; /* Remove as bolinhas padrão da lista */
+    margin-top: 15px;
+}
+
+.lista-itens li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* Linha fina entre os itens */
+}
+
+.lista-itens li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+/* Card de postagem (exemplo de como ficariam seus posts) */
+.card-post {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db; /* Faixa azul na lateral esquerda */
+    margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
