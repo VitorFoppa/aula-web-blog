@@ -94,3 +94,31 @@ footer {
     color: #95a5a6;
     font-size: 0.9rem;
 }
+
+/* --- Cores do Modo Escuro (Atualizado) --- */
+
+body.dark-mode {
+    background-color: #121212; /* Quase preto, padrão de design para modo escuro */
+    color: #e0e0e0; /* Cinza claro para não forçar a vista com branco puro */
+}
+
+body.dark-mode header {
+    background-color: #0a0a0a; /* Preto profundo para destacar o topo */
+    border-bottom: 1px solid #2a2a2a; /* Linha sutil para separar do conteúdo */
+}
+
+body.dark-mode .sobre-mim,
+body.dark-mode .card-post {
+    background-color: #1e1e1e; /* Cinza escuro para os cartões saltarem do fundo */
+    color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra mais forte para criar profundidade */
+    border-left: 5px solid #555; /* Deixa a faixa lateral mais neutra */
+}
+
+body.dark-mode .sobre-mim h3 {
+    border-bottom-color: #555; /* Ajusta a linha do título para combinar */
+}
+
+body.dark-mode .lista-itens li {
+    border-bottom: 1px solid #333; /* Linhas divisórias bem discretas */
+}
