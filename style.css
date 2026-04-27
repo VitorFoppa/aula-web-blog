@@ -1,150 +1,271 @@
-/* Configurações globais: Reseta margens e define a fonte */
+/* =========================================
+   CONFIGURAÇÕES GLOBAIS E MODO CLARO (PASTEL)
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que preenchimentos não aumentem o tamanho do elemento */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9; /* Cor de fundo levemente cinza */
-    color: #333; /* Cor do texto principal */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave na troca de tema */
+    min-height: 100vh;
+    color: #57606f; 
+    background: linear-gradient(135deg, #fdfbfb 0%, #98d6f5 100%);
+    background-attachment: fixed;
+    transition: all 0.2s ease; /* Transição mais rápida para acompanhar o glitch */
 }
 
-/* Container para centralizar o conteúdo e dar um limite de largura */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Estilização do Cabeçalho */
+/* Cabeçalho Pastel */
 header {
-    background-color: #2c3e50; /* Azul escuro */
+    background-color: #30615e; 
     color: white;
     text-align: center;
     padding: 60px 0;
-    margin-bottom: 30px;
-    transition: background-color 0.3s ease;
-}
-
-/* --- Estilos do Botão --- */
-.btn-tema {
-    background-color: #f1c40f; /* Cor amarela para destacar no modo claro */
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background 0.3s ease; /* Animação suave ao passar o mouse */
-}
-
-.btn-tema:hover {
-    background-color: #f39c12; /* Fica um pouco mais escuro ao passar o mouse */
-}
-
-/* Estilização da Foto de Perfil */
-.perfil {
-    text-align: center;
     margin-bottom: 40px;
+    border-radius: 0 0 50px 50px; 
+    box-shadow: 0 10px 20px rgba(162, 155, 254, 0.2);
+    transition: all 0.4s ease;
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Deixa a imagem redonda */
-    border: 5px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave ao redor da foto */
-    object-fit: cover; /* Garante que a foto não fique esticada */
+    width: 140px;
+    height: 140px;
+    border-radius: 40px; 
+    border: 6px solid white;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
 }
 
-.tagline {
-    font-style: italic;
-    color: #7f8c8d;
+.tagline-header {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
 }
 
-/* Seção Sobre Mim */
-.sobre-mim {
+/* Seções e Cards */
+.sobre-mim, .card-post {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    border-radius: 24px;
+    margin-bottom: 25px;
+    border: 1px solid #f1f2f6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s ease;
 }
 
-.sobre-mim h3 {
-    border-bottom: 2px solid #3498db; /* Linha azul embaixo do título */
-    display: inline-block;
-    margin-bottom: 15px;
+.sobre-mim h3, .postagens h3 {
+    color: #30615e;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
-/* Estilização da lista de itens */
-.lista-itens {
-    list-style: none; /* Remove as bolinhas padrão da lista */
-    margin-top: 15px;
+.lista-itens { list-style: none; }
+.lista-itens li { 
+    padding: 12px 0; 
+    border-bottom: 1px solid #f1f2f6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.lista-itens li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee; /* Linha fina entre os itens */
-}
-
-.lista-itens li:last-child {
-    border-bottom: none; /* Remove a linha do último item */
-}
-
-/* Card de postagem (exemplo de como ficariam seus posts) */
 .card-post {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #3498db; /* Faixa azul na lateral esquerda */
-    margin-top: 20px;
-    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    border-left: 8px solid #30615e; 
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 40px 0;
-    color: #95a5a6;
-    font-size: 0.9rem;
+.card-post h4 { 
+    color: #2f3542; /* Cor mais suave para o modo claro */
+    margin-bottom: 10px; 
 }
 
-/* --- Cores do Modo Escuro (Atualizado) --- */
+footer { 
+    text-align: center; 
+    padding: 50px; 
+    color: #a4b0be; 
+}
+
+/* =========================================
+   BOTÃO MODO SECRETO (NO RODAPÉ)
+   ========================================= */
+.btn-secreto {
+    background: transparent;
+    color: #a4b0be;
+    border: 1px dashed #a4b0be;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.btn-secreto:hover {
+    opacity: 1;
+    background: #f1f2f6;
+    color: #2f3542;
+}
+
+/* =========================================
+   ANIMAÇÃO FUTURISTA DE TRANSIÇÃO (GLITCH)
+   ========================================= */
+
+body.theme-transition {
+    animation: systemGlitch 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Overlay do Glitch - Cria o flash na tela */
+body.theme-transition::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+    background: #fff;
+    mix-blend-mode: difference;
+    animation: futuristicFlash 0.6s linear forwards;
+}
+
+@keyframes systemGlitch {
+    0%, 100% { transform: translateX(0) scale(1); filter: blur(0); }
+    10% { transform: translateX(-5px) scale(0.99); filter: blur(2px) contrast(200%); }
+    20% { transform: translateX(5px) scale(1.01); filter: hue-rotate(90deg); }
+    30% { transform: translateX(-2px) scale(1); filter: blur(0); }
+    40% { transform: translateX(2px) skewX(2deg); }
+    50% { transform: translateX(0) skewX(0); }
+}
+
+@keyframes futuristicFlash {
+    0% { opacity: 0; transform: scaleY(0); background: #00f3ff; }
+    10% { opacity: 0.8; transform: scaleY(0.01); background: #ff00ff; }
+    20% { opacity: 1; transform: scaleY(1); background: #fff; }
+    40% { opacity: 0; }
+    50% { opacity: 0.5; background: #39ff14; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* =========================================
+   MODO ESCURO (CIBERPUNK)
+   ========================================= */
 
 body.dark-mode {
-    background-color: #121212; /* Quase preto, padrão de design para modo escuro */
-    color: #e0e0e0; /* Cinza claro para não forçar a vista com branco puro */
+    background: #0a0a0c;
+    color: #00f3ff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body.dark-mode::before {
+    content: " ";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    z-index: 9998;
 }
 
 body.dark-mode header {
-    background-color: #0a0a0a; /* Preto profundo para destacar o topo */
-    border-bottom: 1px solid #2a2a2a; /* Linha sutil para separar do conteúdo */
+    background-color: #000;
+    border-radius: 0;
+    border-bottom: 2px solid #ff00ff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
 }
 
-body.dark-mode .sobre-mim,
-body.dark-mode .card-post {
-    background-color: #1e1e1e; /* Cinza escuro para os cartões saltarem do fundo */
-    color: #e0e0e0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra mais forte para criar profundidade */
-    border-left: 5px solid #555; /* Deixa a faixa lateral mais neutra */
+body.dark-mode .titulo-principal {
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00f3ff;
+    text-transform: uppercase;
 }
 
-body.dark-mode .sobre-mim h3 {
-    border-bottom-color: #555; /* Ajusta a linha do título para combinar */
-}
-
-body.dark-mode .lista-itens li {
-    border-bottom: 1px solid #333; /* Linhas divisórias bem discretas */
-}
-
-/* Ajusta a borda da foto de perfil no modo escuro */
 body.dark-mode .foto-perfil {
-    border-color: #1e1e1e;
+    border-color: #00f3ff;
+    box-shadow: 0 0 15px #00f3ff;
+    border-radius: 50%; 
+}
+
+body.dark-mode .sobre-mim, 
+body.dark-mode .card-post {
+    background-color: #121214;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    box-shadow: 5px 5px 0px #ff00ff;
+    border-radius: 0; 
+}
+
+body.dark-mode .sobre-mim h3, 
+body.dark-mode .postagens h3 {
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+body.dark-mode .card-post {
+    border-left: 6px solid #ff00ff;
+}
+
+body.dark-mode .card-post h4 { 
+    color: #ff00ff; /* Rosa neon de volta ao modo ciberpunk */
+}
+
+/* Estilo do Botão Secreto no Modo Escuro */
+body.dark-mode .btn-secreto {
+    color: #39ff14;
+    border: 1px dashed #39ff14;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body.dark-mode .btn-secreto:hover {
+    background: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    text-shadow: 0 0 5px #39ff14;
+    animation: cyber-jitter 0.15s infinite;
+}
+
+/* =========================================
+   NOVA ANIMAÇÃO: CYBER JITTER (OSCILAÇÃO)
+   ========================================= */
+
+@keyframes cyber-jitter {
+    0% { transform: translate(0); filter: hue-rotate(0deg); }
+    20% { transform: translate(-3px, 2px) skewX(1deg); }
+    40% { transform: translate(-3px, -2px) skewX(-1deg); filter: hue-rotate(90deg); }
+    60% { transform: translate(3px, 2px) skewX(0deg); }
+    80% { transform: translate(3px, -2px) skewX(1deg); filter: contrast(150%); }
+    100% { transform: translate(0); filter: hue-rotate(0deg); }
+}
+
+/* Aplicando a oscilação nos itens ao passar o mouse (Hover) */
+
+/* Nos cards e na seção sobre mim */
+body.dark-mode .card-post:hover, 
+body.dark-mode .sobre-mim:hover {
+    animation: cyber-jitter 0.15s infinite;
+    border: 1px solid #39ff14;
+    box-shadow: 5px 5px 15px rgba(57, 255, 20, 0.4), -5px -5px 15px rgba(255, 0, 255, 0.4);
+    cursor: crosshair; 
+    z-index: 5;
+    position: relative;
+}
+
+/* Nos itens da lista */
+body.dark-mode .lista-itens li:hover {
+    animation: cyber-jitter 0.1s infinite;
+    color: #39ff14;
+    padding-left: 10px;
+    background: rgba(57, 255, 20, 0.05);
+}
+
+/* Na foto de perfil */
+body.dark-mode .foto-perfil:hover {
+    animation: cyber-jitter 0.2s infinite;
+    filter: grayscale(0) brightness(1.2) contrast(1.5);
 }

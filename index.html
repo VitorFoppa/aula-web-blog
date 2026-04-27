@@ -3,66 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog Pessoal</title>
+    <title>Vitor Foppa | Blog Pessoal</title>
+    
+    <link rel="icon" type="image/jpeg" href="imagem.jpeg">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>Bem-vindo ao meu Blog</h1>
-            <p>Um pouco sobre quem eu sou e o que eu faço.</p>
-            <button id="toggle-tema" class="btn-tema">🌙 Modo Escuro</button>
+            <img src="imagem.jpeg" alt="Minha Foto de Perfil" class="foto-perfil">
+            <h1 class="titulo-principal">Vitor Foppa</h1>
+            <p class="tagline-header">Estudante & Entusiasta de Tecnologia</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="perfil">
-            <img src="imagem.jpeg" alt="Minha Foto de Perfil" class="foto-perfil">
-            <h2>Vitor Foppa</h2>
-            <p class="tagline">Estudante & Entusiasta de Tecnologia</p>
-        </section>
-
         <section class="sobre-mim">
             <h3>Sobre Mim</h3>
-            <p>Olá frodo...</p>
+            <p>Olá! Me chamo Vitor. Bem-vindo ao meu espaço pessoal onde compartilho um pouco da minha jornada e paixões.</p>
             
             <ul class="lista-itens">
-                <li>📍 Localizado em: Santa Tereza do Oeste, Brasil</li>
-                <li>🎓 Formação: Análise e Desenvolvimento de Sistemas</li>
-                <li>💻 Tecnologias favoritas: HTML, CSS e Java</li>
-                <li>📚 Atualmente aprendendo: Frameworks modernos</li>
-                <li>☕ Hobby: Café e filmes de ficção científica</li>
+                <li><span class="icon">📍</span> Localizado em: Santa Tereza do Oeste, Brasil</li>
+                <li><span class="icon">🎓</span> Formação: Análise e Desenvolvimento de Sistemas</li>
+                <li><span class="icon">💻</span> Tecnologias: HTML, CSS e Java</li>
+                <li><span class="icon">📚</span> Aprendendo: Frameworks modernos</li>
+                <li><span class="icon">☕</span> Hobby: Café e filmes de ficção científica</li>
             </ul>
         </section>
 
         <section class="postagens">
-            <h3>Sobre Min</h3>
+            <h3>Meus Interesses</h3> 
             <article class="card-post">
                 <h4>Games</h4>
-                <p>Grande entusiasta de jogos, sendo os principais de ação e aventura, de preferencia no modo história, recentemente finalizando Days Gone e Assassin's Creed Odyssey.</p>
+                <p>Grande entusiasta de jogos de ação e aventura. Recentemente finalizando Days Gone e Assassin's Creed Odyssey.</p>
             </article>
             <article class="card-post">
                 <h4>Filmes</h4>
-                <p>Gosto muito de filmes de ação, quase sempre extendendo meu gosto para series e maratonas de filmes e séries. No ultimo fim de semana maratonei La Casa de Papel.</p>
+                <p>Gosto muito de filmes de ação e maratonas de séries. No último fim de semana assisti La Casa de Papel.</p>
             </article>
             <article class="card-post">
                 <h4>Carros e Corridas</h4>
-                <p>Tenho grande apresso por velocidade, acompanhando algumas corridas de Stock car e alguns circuitos regionais, não podendo esquecer do Kart.</p>
+                <p>Tenho grande apreço por velocidade, acompanhando corridas de Stock car e circuitos de Kart.</p>
             </article>
             <article class="card-post">
-                <h4>Culinaria</h4>
-                <p>Gosto de cozinhar, dentre os meus pratos preferidos, gosto muito de churrasco, lasanha e pizza.</p>
+                <h4>Culinária</h4>
+                <p>Gosto de cozinhar pratos como churrasco, lasanha e pizza.</p>
             </article>
             <article class="card-post">
                 <h4>Tempo livre</h4>
-                <p>No meu tempo livre gosto de passar tempo com a minha familia, cozinhar, conversar ou fazer alguma viagem para algum ponto turistico.</p>
+                <p>No meu tempo livre gosto de passar tempo com a minha família, cozinhar e viajar.</p>
             </article>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2023 - Vitor Foppa</p>
+        <button id="btn-secreto" class="btn-secreto">🤫 Modo Secreto</button>
     </footer>
 
     <script src="script.js"></script>

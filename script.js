@@ -1,21 +1,26 @@
-// Passo 1: Encontrar os elementos na página
-// Pegamos o botão que criaremos no HTML através do seu ID
-const botaoTema = document.getElementById('toggle-tema');
-// Pegamos o elemento principal (body) para mudar a cor de fundo de todo o site
+// Seleciona o botão secreto pelo novo ID
+const btnSecreto = document.getElementById('btn-secreto');
 const body = document.body;
 
-// Passo 2: Dizer ao botão o que fazer quando for clicado
-botaoTema.addEventListener('click', () => {
+btnSecreto.addEventListener('click', () => {
+    // 1. Adiciona a classe que dispara a animação de glitch futurista
+    body.classList.add('theme-transition');
     
-    // O 'toggle' funciona como um interruptor. Se a classe 'dark-mode' não existir no body, ele adiciona. Se já existir, ele remove.
-    body.classList.toggle('dark-mode');
+    // 2. Espera um pequeno milissegundo no meio do "flash" para trocar o tema
+    // Assim a mudança brusca de cor fica escondida pela animação
+    setTimeout(() => {
+        body.classList.toggle('dark-mode');
+        
+        // Atualiza o texto do botão secreto dependendo do estado do sistema
+        if (body.classList.contains('dark-mode')) {
+            btnSecreto.innerHTML = '🔙 Desativar Protocolo';
+        } else {
+            btnSecreto.innerHTML = '🤫 Modo Secreto';
+        }
+    }, 150); // Troca o tema 150ms após o início do glitch
 
-    // Passo 3: Mudar o texto do botão para fazer sentido com o tema atual
-    if (body.classList.contains('dark-mode')) {
-        // Se o modo escuro estiver ativo, o botão oferece a opção do modo claro
-        botaoTema.textContent = '☀️ Modo Claro';
-    } else {
-        // Se o modo escuro estiver desativado, o botão oferece o modo escuro
-        botaoTema.textContent = '🌙 Modo Escuro';
-    }
+    // 3. Remove a classe de animação após ela terminar (600ms) para que possa ser usada de novo
+    setTimeout(() => {
+        body.classList.remove('theme-transition');
+    }, 600);
 });
